@@ -85,6 +85,7 @@ public class LocationService extends IntentService {
       for (Map.Entry<String, ?> entry : keys.entrySet()) {
         String jsonString = prefs.getString(entry.getKey(), null);
         NamedGeofence namedGeofence = gson.fromJson(jsonString, NamedGeofence.class);
+        //retrieve geofence by id
         if (namedGeofence.id.equals(geofenceId)) {
           geofenceName = namedGeofence.name;
           break;

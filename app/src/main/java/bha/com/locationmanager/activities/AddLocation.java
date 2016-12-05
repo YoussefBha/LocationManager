@@ -99,7 +99,6 @@ public class AddLocation extends AppCompatActivity implements AddGeofence{
             if (resultCode == RESULT_OK) {
                 Place place = PlacePicker.getPlace(data, getApplicationContext());
                 String toastMsg = String.format("%s", place.getAddress());
-              //   Toast.makeText(getApplicationContext(), toastMsg, Toast.LENGTH_LONG).show();
                 NamedGeofence geofence = new NamedGeofence();
                 geofence.name = toastMsg;
                 geofence.latitude = place.getLatLng().latitude;
@@ -159,6 +158,7 @@ public class AddLocation extends AppCompatActivity implements AddGeofence{
 
 
 
+    //check location permession for Android 5.0/+
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public static boolean checkPermission(final Context context)
     {

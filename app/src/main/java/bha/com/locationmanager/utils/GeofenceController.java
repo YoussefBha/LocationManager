@@ -27,6 +27,9 @@ import java.util.Map;
 
 import bha.com.locationmanager.service.LocationService;
 
+
+
+//location manager
 public class GeofenceController {
 
   // region Properties
